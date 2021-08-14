@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./content/styles/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid space-mono">
+    <div row>
+      <div class="col-xs-12 top-section">
+        <h1>SPLI</h1>
+        <h1>TTER</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 main centre">
+        <form>
+          <label for="bill">Bill</label><br>
+          <input type="text" id="bill", name="bill"><span class="stack-svg"><img class="icon" src="./images/icon-dollar.svg"></span><br>
+          <br>
+          <label>Select Tip %</label><br>
+          <div class="row">
+            <div class="col-6 col-md-4" ><input type="button" value="5%"></div>
+            <div class="col-6 col-md-4" ><input type="button" value="10%"></div>
+            <div class="col-6 col-md-4" ><input type="button" value="15%"></div>
+            <div class="col-6 col-md-4" ><input type="button" value="25%"></div>
+            <div class="col-6 col-md-4" ><input type="button" value="50%"></div>
+            <div class="col-6 col-md-4" ><input type="text" name="custom" placeholder="Custom"></div>
+          </div>
+          <br>
+          <label for="noPeople">Number of People</label><br>
+          <input type="text" id="bill", name="bill"><span class="stack-svg"><img class="icon" src="./images/icon-person.svg"></span><br>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+ <!-- 
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset-->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

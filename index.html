@@ -18,54 +18,61 @@
   </style>
 </head>
 <body>
-
-  <div class="container-fluid space-mono">
-    <div row>
-      <div class="col-xs-12 top-section">
-        <h1>SPLI</h1>
-        <h1>TTER</h1>
-      </div>
-    </div>
+  <div class="container-fluid space-mono center">
     <div class="row">
-      <div class="col-xs-12 main">
-        <form>
-          <label for="bill">Bill</label><br>
-          <input type="text" id="bill", name="bill"><span class="stack-svg"><img class="icon" src="./images/icon-dollar.svg"></span><br>
-          <br>
-          <label>Select Tip %</label><br>
-          <div class="row">
-            <div class="col-6 col-md-4" ><input type="button" value="5%"></div>
-            <div class="col-6 col-md-4" ><input type="button" value="10%"></div>
-            <div class="col-6 col-md-4" ><input type="button" value="15%"></div>
-            <div class="col-6 col-md-4" ><input type="button" value="25%"></div>
-            <div class="col-6 col-md-4" ><input type="button" value="50%"></div>
-            <div class="col-6 col-md-4" ><input type="text" name="custom" placeholder="Custom"></div>
-          </div>
-          <br>
-          <label for="noPeople">Number of People</label><br>
-          <input type="text" id="bill", name="bill"><span class="stack-svg"><img class="icon" src="./images/icon-person.svg"></span><br>
-        </form>
+      <div class="top-section">
+        <p>SPLI</p>
+        <p>TTER</p>
       </div>
-    </div>
-  </div>
-
-
-
- <!-- 
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset-->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      <div class="col-xs-12 main centre">
+        <div class="row">
+          <div class="col-md-6">
+            <form>
+              <label for="bill">Bill</label><br>
+              <input type="text" class="rightJustified" id="bill" name="bill" placeholder="0" onchange="CalculateTipTotalAmount()"><span class="stack-svg"><img class="icon" src="./images/icon-dollar.svg"></span><br>
+              <br>
+              <label>Select Tip %</label><br>
+              <div class="row">
+                <div class="col-6 col-md-4" ><input type="button" value="5%" onclick="tipPercent5()"></div>
+                <div class="col-6 col-md-4" ><input type="button" value="10%" onclick="tipPercent10()"></div>
+                <div class="col-6 col-md-4" ><input type="button" value="15%" onclick="tipPercent15()"></div>
+                <div class="col-6 col-md-4" ><input type="button" value="25%" onclick="tipPercent25()"></div>
+                <div class="col-6 col-md-4" ><input type="button" value="50%" onclick="tipPercent50()"></div>
+                <div class="col-6 col-md-4" ><input type="text" class="rightJustified" name="custom" placeholder="Custom" onchange="tipPercentCustom(this.value)"></div>
+              </div>
+              <br>
+              <label for="noPeople">Number of People</label><br>
+              <input type="text" class="rightJustified" id="noPeople" name="noPeople" placeholder="0"><span class="stack-svg"><img class="icon" src="./images/icon-person.svg"></span><br>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="row results">
+              <div class="row">
+                <div class="col-6">
+                  <p class="resMain">Tip Amount</p>
+                  <p class="resSub">/ person</p>
+                </div>
+                <div class="col-6">
+                  <p class="money" id="tipAmount">$0.00</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="resMain">Total</p>
+                  <p class="resSub">/ person</p>
+                </div>
+                <div class="col-6">
+                  <p class="money" id="totalAmount">$0.00</p>
+                </div>
+              </div>
+              <div class="row center">
+                <button class="reset" id="reset">RESET</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
   </div>
 </body>
 </html>
