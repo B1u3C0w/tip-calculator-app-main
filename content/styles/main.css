@@ -31,12 +31,12 @@ label {
 .top-section {
     text-align: center;
     display: block;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
     color: hsl(183, 100%, 15%);
 }
 
-input[type=text], select {
+input[type=number], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -48,6 +48,18 @@ input[type=text], select {
     color: hsl(183, 100%, 15%);
     font-size: 1.4em;
     font-weight: bolder;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 input[type=button], select {
@@ -132,4 +144,9 @@ input[type=button]:hover {
     background-color: hsl(186, 14%, 43%);
     color: hsl(183, 100%, 15%);
     height: 40px;
+}
+
+.reset:hover {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
 }
