@@ -1,82 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="./content/styles/main.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet"> 
 
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-  </style>
+    <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
-  <div class="container-fluid space-mono center">
-    <div class="row">
-      <div class="top-section">
-        <!--<p>SPLI</p>
-        <p>TTER</p>-->
-        <img class="icon" src="./images/logo.svg">
-      </div>
-      <div class="col-xs-12 main centre">
-        <div class="row">
-          <div class="col-md-6">
-            <form>
-              <label for="bill">Bill</label><br>
-              <input type="number" class="rightJustified" id="bill" name="bill" placeholder="0" onchange="CalculateTipTotalAmount()"/><br><span class="stack-svg"><img class="icon" src="./images/icon-dollar.svg"></span>
-              <br>
-              <label>Select Tip %</label><br>
-              <div class="row">
-                <div class="col-6 col-md-4" ><input type="button" class="tipButton" value="5%" onclick="updateTip(this)"></div>
-                <div class="col-6 col-md-4" ><input type="button" class="tipButton" value="10%" onclick="updateTip(this)"></div>
-                <div class="col-6 col-md-4" ><input type="button" class="tipButton" value="15%" onclick="updateTip(this)"></div>
-                <div class="col-6 col-md-4" ><input type="button" class="tipButton" value="25%" onclick="updateTip(this)"></div>
-                <div class="col-6 col-md-4" ><input type="button" class="tipButton" value="50%" onclick="updateTip(this)"></div>
-                <div class="col-6 col-md-4" ><input type="number" class="rightJustified" name="custom" placeholder="Custom" onchange="tipPercentCustom(this.value)"></div>
-              </div>
-              <br>
-              <label for="noPeople">Number of People</label><br>
-              <input type="number" class="rightJustified" id="noPeople" name="noPeople" placeholder="0" onchange="CalculateTipTotalAmount()"><span class="stack-svg"><img class="icon" src="./images/icon-person.svg"></span><br>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <div class="row results">
-              <div class="row">
-                <div class="col-6">
-                  <p class="resMain">Tip Amount</p>
-                  <p class="resSub">/ person</p>
-                </div>
-                <div class="col-6">
-                  <p class="money" id="tipAmount">$0.00</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <p class="resMain">Total</p>
-                  <p class="resSub">/ person</p>
-                </div>
-                <div class="col-6">
-                  <p class="money" id="totalAmount">$0.00</p>
-                </div>
-              </div>
-              <div class="row center">
-                <button class="reset" id="reset">RESET</button>
-              </div>
-            </div>
-          </div>
+    <div class="container">
+        <div class="logo">
+            <img src="./images/logo.svg" alt="logo">
         </div>
-      </div>
-    </div>    
-  </div>
+        <div class="card">
+            <div class="input">
+                <div class="bill-container">
+                    <div class="label-wrapper">
+                        <label for="inp-bill">Bill</label>
+                    </div>
+                    <div class="inp-wrapper">
+                        <input class="inp-text" type="text" name="inp-bill" id="inp-bill" placeholder="0.00">
+                        <img src="./images/icon-dollar.svg" alt="dollar">
+                    </div>
+                </div>
+                <div class="tip-container">
+                    <div class="label-wrapper">
+                        <label for="inp-tip">Select Tip %</label>
+                    </div>
+                    <div class="btn-wrapper">
+                        <div class="btn tip">5%</div>
+                        <div class="btn tip">10%</div>
+                        <div class="btn tip btn-active">15%</div>
+                        <div class="btn tip">25%</div>
+                        <div class="btn tip">50%</div>
+                        <input class="inp-text" type="text" name="inp-tip" id="inp-tip" placeholder="Custom">
+                    </div>
+                </div>
+                <div class="people-container">
+                    <div class="label-wrapper">
+                        <label for="inp-people">Number of People</label>
+                        <div class="error-msg">Can't be zero</div>
+                    </div>
+                    <div class="inp-wrapper">
+                        <input class="inp-text" type="text" name="inp-people" id="inp-people" placeholder="1">
+                        <img src="./images/icon-person.svg" alt="dollar">
+                    </div>
+                </div>                
+            </div>
+            <div class="output">
+                <div class="line-wrapper">
+                    <div class="line-output">
+                        <div class="title-wrapper">
+                            <div class="title">Tip Amount</div>
+                            <div class="desc">/ person</div>
+                        </div>
+                        <div class="value">$0.00</div>
+                    </div>
+                    <div class="line-output">
+                        <div class="title-wrapper">
+                            <div class="title">Total</div>
+                            <div class="desc">/ person</div>
+                        </div>
+                        <div class="value">$0.00</div>
+                    </div>
+                </div>
+                <div class="btn reset">Reset</div>
+            </div>
+        </div>
+    </div>
 
-  <script src="./content/main.js"></script>
-
+    <script src="./js/app.js"></script>
 </body>
 </html>
