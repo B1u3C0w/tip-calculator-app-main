@@ -1,6 +1,6 @@
 # Frontend Mentor - Tip calculator app solution
 
-This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is my solution for the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). 
 
 ## Table of contents
 
@@ -46,6 +46,17 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [Styled Components](https://styled-components.com/) - For styles
+
+## Skills Learnt
+
+- Develop an understanding of the deeper SCSS over CSS.
+- Improve my basic knowledge on JavaScript and utlise some more advance methods within the language.
+- Flexboxes within the SCSS and how to use them between mobile and desktop applications.
+
+## Future Ways of Improving the Application
+
+- Will look to transition the entire site to a REACT UI, removing any HTML but retaining majoreity of SCSS.
+- Save results into a MongoDB for future records keeping.
 
 ## Author
 
